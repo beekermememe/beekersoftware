@@ -4,7 +4,10 @@ Beekerwebsite::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home_page#index'
-
+  get 'home' => 'home_page#index'
+  get 'about_me' => 'about_me#index'
+  get 'blog' => 'blog#index'
+  get 'contact' => 'contact#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

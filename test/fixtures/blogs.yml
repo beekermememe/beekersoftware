@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  article_count: 1
+  title: MyString
+  last_article_date: MyString
+
+two:
+  article_count: 1
+  title: MyString
+  last_article_date: MyString
