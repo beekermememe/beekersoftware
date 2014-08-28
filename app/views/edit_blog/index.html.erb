@@ -1,0 +1,10 @@
+<table>
+<% @articles.each do |article| %>
+  <tr id= <%= "#{article.id}"%> >
+    <td> <%= "#{article.title}" %></td>
+    <td></td>
+    <td><a class="delete"><i class="icon-trash"></i> Delete</a></td>
+  <tr>
+<% end %>
+</table>
+<a class="new" href='/admin/New'><i class="icon-plus-sign"></i> Add New Article</a>

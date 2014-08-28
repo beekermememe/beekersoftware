@@ -8,6 +8,7 @@ Beekerwebsite::Application.routes.draw do
   get 'about_me' => 'about_me#index'
   get 'blog' => 'blog#index'
   get 'contact' => 'contact#index'
+  get 'admin' => 'edit_blog#index'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,3 +1,17 @@
 <h1>
-  My Blog
-</ht>
+  Beekers Blog
+</h1>
+
+<% @articles.each do |article| %>
+
+<p>
+  <b><%= "#{article.title}"%></b>
+</p>
+<p>
+by <%= "#{article.author}" %>
+</p>
+<p>
+  <%= "#{article.content}" %>
+</p>
+
+<% end %>
