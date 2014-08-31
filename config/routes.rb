@@ -9,6 +9,11 @@ Beekerwebsite::Application.routes.draw do
   get 'blog' => 'blog#index'
   get 'contact' => 'contact#index'
   get 'admin' => 'edit_blog#index'
+  get 'admin/new' => 'edit_blog#new'
+  post 'admin/create' => 'edit_blog#create'
+  delete 'admin/delete' => 'edit_blog#delete'
+  get 'admin/articles' => 'edit#articles'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -41,6 +41,7 @@ gem 'rails_12factor', group: :production
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem 'stringjs-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -49,4 +50,7 @@ gem "twitter-bootstrap-rails"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'pry', group: [:development, :test]
+
 ruby "2.1.1"
+

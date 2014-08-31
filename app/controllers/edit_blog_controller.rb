@@ -1,4 +1,5 @@
 class EditBlogController < ApplicationController
+  skip_before_filter :verify_authenticity_token, :only => [:create]
   def index
     @articles = Articles.all
   end
@@ -7,12 +8,23 @@ class EditBlogController < ApplicationController
     Article.find(:id => params[:id]).delete
   end
 
-  def add
-    Article.create(
+  def new
+
+  end
+
+  def create
+    binding.pry
+    article = Articles.create(
       :title => params[:title],
       :content => params[:content],
       :author => params[:author]
       )
-    @articles = Articles.all
+    article.save!
+    redirect_to '/admin'
   end
+
+  def articles
+    render :json => Articles.all.to_json
+  end
+
 end

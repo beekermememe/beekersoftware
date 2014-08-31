@@ -1,0 +1,20 @@
+<div id="edit_article">
+<h1>Edit</h1>
+<form action="/admin/edit" method="post">
+<div>
+<label>Title</label>
+<input type="Title" id="title" name="title" value="<%= @title %>"></input></div>
+<div>
+<label>Author</label>
+<input type="text" id="author" name="author" value="<%= @author %>">></input>
+</div>
+<div>
+<label>Content</label>
+<input type="textarea" id="content" name="content" value="<%= @content %>">></input>
+</div>
+<label>Publish?</label>
+<input type="checkbox" id="content" name="content" value="<%= @publish %>">></input>
+</div>
+<button type="submit">Submit</button>
+</form>
+</div>

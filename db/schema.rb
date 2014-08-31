@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140426195338) do
+ActiveRecord::Schema.define(version: 20140831143214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140426195338) do
     t.integer  "word_count"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "publish"
   end
 
   create_table "blogs", force: true do |t|
