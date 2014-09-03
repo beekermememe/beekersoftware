@@ -26,8 +26,21 @@ class EditBlogController < ApplicationController
       :author => params[:author],
       :publish => params[:publish].to_s == "on" ? true : false
       )
-    article.save!
-    redirect_to '/admin'
+    save_ok = true
+    begin
+      article.save!
+    rescue ActiveRecord::RecordInvalid => e
+      save_ok = false
+    end
+
+    if save_ok
+      redirect_to '/admin'
+    else
+      redirect_to '/admin/save_error'
+    end
+  end
+
+  def save_error
   end
 
   def update
