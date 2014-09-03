@@ -1,14 +1,14 @@
 <div id="articles">
 <table class="table table-striped" border=1>
-  <tr><th>ID</th><th>Title</th><th>Author</th><th>Created</th>th>Publish</th><th>Action</th>
+  <tr><th>ID</th><th>Title</th><th>Author</th><th>Created</th><th>Published</th><th>Action</th>
   <% @articles.each do |article| %>
-  <tr id= <%= "#{article.id}"%> >
+  <tr id= <%= "article_#{article.id}"%> >
     <td> <%= "#{article.id}" %></td>
     <td> <%= "#{article.title}" %></td>
     <td> <%= "#{article.author}" %></td>
     <td> <%= "#{article.created_at}" %></td>
-    <td> <%= "#{article.publish? ? 'Yes' : 'No'}" %></td>
-    <td><a class="delete_article" id=<%= "delete_article_#{article.id}" %>><i class="icon-trash"></i> Delete</a>/<a class="edit_article" id=<%= "edit_article_#{article.id}" %>><i class="icon-trash"></i> Edit</a></td>
+    <td> <%= "#{article.publish ? 'Yes' : 'No'}" %></td>
+    <td><a class="delete_article" id=<%= "delete_article_#{article.id}" %>><span class="glyphicon glyphicon-trash"></span> Delete</a> / <a class="edit_article" id=<%= "edit_article_#{article.id}" %>><span class="glyphicon glyphicon-pencil"></span> Edit</a></td>
   <tr>
   <% end %>
 </table>

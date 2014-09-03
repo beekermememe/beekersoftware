@@ -11,7 +11,9 @@ Beekerwebsite::Application.routes.draw do
   get 'admin' => 'edit_blog#index'
   get 'admin/new' => 'edit_blog#new'
   post 'admin/create' => 'edit_blog#create'
-  delete 'admin/delete' => 'edit_blog#delete'
+  post 'admin/update' => 'edit_blog#update'
+  get 'admin/edit/:id' => 'edit_blog#edit'
+  delete 'admin/delete/:id' => 'edit_blog#delete'
   get 'admin/articles' => 'edit#articles'
 
   # Example of regular route:
