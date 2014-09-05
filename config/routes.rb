@@ -7,6 +7,7 @@ Beekerwebsite::Application.routes.draw do
   get 'home' => 'home_page#index'
   get 'about_me' => 'about_me#index'
   get 'blog' => 'blog#index'
+  get 'article/:id' => 'blog#article'
   get 'contact' => 'contact#index'
   get 'admin' => 'edit_blog#index'
   get 'admin/new' => 'edit_blog#new'

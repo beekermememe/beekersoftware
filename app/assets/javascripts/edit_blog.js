@@ -1,4 +1,4 @@
-var ready;
+var set_delete_event;
 
 set_delete_event = function(){
   var articles = $("a.delete_article")
@@ -21,6 +21,7 @@ attach_delete = function (idx,article){
   };
 };
 
+var set_edit_event;
 set_edit_event = function(){
   var articles = $("a.edit_article")
   articles.each(attach_edit);

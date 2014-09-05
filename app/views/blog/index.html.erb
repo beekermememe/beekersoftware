@@ -1,17 +1,22 @@
 <h1>
-  Beekers Blog
+  Beekers Blogs
 </h1>
-
+<div class="row">
+<div class="col-md-3">
+<ul class="list-group">
 <% @articles.each do |article| %>
-
-<p>
-  <b><%= "#{article.title}"%></b>
-</p>
-<p>
-by <%= "#{article.author}" %>
-</p>
-<p>
-  <%=raw "#{article.content}" %>
-</p>
-
+  <li class="blog-title list-group-item" id=<%= "list_article_#{article.id}" %>><%= article.title %></li>
 <% end %>
+</div>
+<div class="col-md-9">
+<p>
+  <b id="blog-title">Title: <%= "#{@articles.last.title}"%></b>
+</p>
+<p id="blog-author">
+by <%= "#{@articles.last.author}" %>
+</p>
+<p id="blog-content">
+  <%=raw "#{@articles.last.content}" %>
+</p>
+</div>
+</div>
