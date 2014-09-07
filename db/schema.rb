@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903223514) do
+ActiveRecord::Schema.define(version: 20140907150717) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20140903223514) do
     t.integer  "article_count"
     t.string   "title"
     t.string   "last_article_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "oauth_credentials", force: true do |t|
+    t.date     "issued_at"
+    t.string   "refresh_token"
+    t.string   "instance_url"
+    t.string   "access_token"
+    t.string   "signature"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

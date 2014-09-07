@@ -18,6 +18,10 @@ Beekerwebsite::Application.routes.draw do
   get 'admin/articles' => 'edit_blog#articles'
   get 'admin/save_error' => 'edit_blog#save_error'
 
+  get 'sfdemo/oauth' => 'sfdemo#oauth'
+  post 'sfdemo/oauth' => 'sfdemo#oauth'
+  get 'sfdemo/chatter' => 'sfdemo#chatter'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

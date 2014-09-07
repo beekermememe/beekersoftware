@@ -10,11 +10,11 @@
 </div>
 <div class="col-md-9">
 <p>
-  <b id="blog-title">Title: <%= "#{@articles.last.title}"%></b>
+  <b id="blog-title"><%= "#{@articles.last.title}"%></b>
 </p>
-<p id="blog-author">
+<i><p id="blog-author">
 by <%= "#{@articles.last.author}" %>
-</p>
+</p></i>
 <p id="blog-content">
   <%=raw "#{@articles.last.content}" %>
 </p>
