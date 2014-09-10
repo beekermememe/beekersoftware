@@ -29,8 +29,6 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'puma'
 
-gem 'databasedotcom'
-
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -46,7 +44,10 @@ gem "twitter-bootstrap-rails"
 gem 'stringjs-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
-
+gem 'devise'
+gem 'force'
+gem 'omniauth'
+gem 'omniauth-salesforce'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 

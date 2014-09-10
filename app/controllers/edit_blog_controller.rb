@@ -20,18 +20,7 @@ class EditBlogController < ApplicationController
 
 
   def create
-    article = Articles.create(
-      :title => params[:title],
-      :content => params[:content],
-      :author => params[:author],
-      :publish => params[:publish].to_s == "on" ? true : false
-      )
-    save_ok = true
-    begin
-      article.save!
-    rescue ActiveRecord::RecordInvalid => e
-      save_ok = false
-    end
+    save_ok = Articles.create_new(params)
 
     if save_ok
       redirect_to '/admin'
@@ -44,14 +33,7 @@ class EditBlogController < ApplicationController
   end
 
   def update
-    article = Articles.find(params[:id])
-    article.update(
-      :title => params[:title],
-      :content => params[:content],
-      :author => params[:author],
-      :publish => params[:publish].to_s == "on" ? true : false
-      )
-    article.save!
+    update_ok = Articles.update_existing(params)
     redirect_to '/admin'
   end
 
