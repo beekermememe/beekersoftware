@@ -22,6 +22,7 @@ Beekerwebsite::Application.routes.draw do
   get 'sfdemo/oauth' => 'sfdemo#oauth'
   post 'sfdemo/oauth' => 'sfdemo#oauth'
   get 'sfdemo/chatter' => 'sfdemo#chatter'
+  get 'sfdemo/sfdemo' => 'sfdemo#sfdemo'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

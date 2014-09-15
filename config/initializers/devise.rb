@@ -22,7 +22,8 @@ Devise.setup do |config|
   require 'devise/orm/active_record'
   require 'omniauth-salesforce'
 
-  config.omniauth :salesforce, ENV['DATABASEDOTCOM_CLIENT_ID'],ENV['DATABASEDOTCOM_CLIENT_SECRET']
+  #config.omniauth :salesforce, ENV['DATABASEDOTCOM_CLIENT_ID'],ENV['DATABASEDOTCOM_CLIENT_SECRET']
+  config.omniauth :salesforce, '3MVG9xOCXq4ID1uGiJjsqGFMpEScZJ4BS9EtHVjvi6KRoB4MLDZxFX0r0Q.Rw2f4BFovfTCgBPk9qBdARl3wJ','6252326227156632472'
   # ==> Configuration for any authentication mechanism
   # Configure which keys are used when authenticating a user. The default is
   # just :email. You can configure it to use [:username, :subdomain], so for

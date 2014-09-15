@@ -6,7 +6,7 @@ class Sfusers::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     set_session_info(credentials)
     puts "USER USER INFO: #{request.env["omniauth.auth"].to_yaml}"
     @user = Sfuser.find_for_salesforce_oauth(request.env["omniauth.auth"])
-    redirect '/sfdemo'
+    redirect_to "/sfdemo/sfdemo?userid=#{@user.id}"
   end
 
   def auth_hash
