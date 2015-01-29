@@ -55,5 +55,5 @@ gem 'omniauth-salesforce'
 # gem 'debugger', group: [:development, :test]
 gem 'pry', group: [:development, :test]
 
-ruby "2.1.1"
+ruby "2.1.5"
 
